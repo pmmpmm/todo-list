@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-x15) var(--padding-y15);
+}
+.filters {
+  display: flex;
+  gap: 10px;
+}
+.filters li button {
+  color: var(--accent-color);
+  text-transform: capitalize;
+}

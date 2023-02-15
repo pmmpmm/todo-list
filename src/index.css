@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-bg-light: #f3f3f3;
+  --color-box-light: #ffffff;
+  --text-color: #222222;
+
+  --padding-x15: 15px;
+  --padding-y15: 15px;
+
+  --accent-color: #ff7e1b;
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--color-bg-light);
+  line-height: 1;
+  font-weight: 500;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  max-width: 500px;
+  max-height: 700px;
+  min-width: 300px;
+  min-height: 400px;
+  background-color: var(--color-box-light);
+  box-shadow: 11px 10px 32px -8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 11px 10px 32px -8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 11px 10px 32px -8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+div,
+p,
+button,
+ul,
+li,
+section,
+header {
+  margin: 0 0;
+  padding: 0 0;
+  font-weight: 500;
 }
