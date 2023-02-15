@@ -1,13 +1,35 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: var(--padding-x15) var(--padding-y15);
+  align-items: center;
+  padding: 18px var(--padding-x-01);
+  background-color: var(--color-main01);
 }
 .filters {
   display: flex;
-  gap: 10px;
+  gap: 14px;
 }
-.filters li button {
+.filters .filter .button {
+  padding: 4px 0;
+  font-family: var(--font-exbold);
+  font-size: 0.95rem;
   color: var(--accent-color);
   text-transform: capitalize;
+  transition: var(--transition01);
+  opacity: 0.6;
+}
+.filters .filter .button:hover,
+.filters .filter.selected .button {
+  opacity: 1;
+}
+.themeToggleBtn {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.themeToggleBtn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--color-dark01);
 }

@@ -10,7 +10,7 @@ function App() {
   };
   return (
     <DarkModeProvider>
-      <Header filters={filters} onFilter={handleFilter} />
+      <Header filters={filters} filter={filter} onFilter={handleFilter} />
       <TodoList filter={filter} />
     </DarkModeProvider>
   );

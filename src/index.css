@@ -1,18 +1,42 @@
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
+
 :root {
-  --color-bg-light: #f3f3f3;
-  --color-box-light: #ffffff;
-  --text-color: #222222;
+  --color-body-bg: #e5e5e5;
+  --color-main01: #ffffff;
+  --color-main02: #f4f4f4;
+  --accent-color: #f76008;
+  --text-color01: #222222;
 
-  --padding-x15: 15px;
-  --padding-y15: 15px;
+  --color-dark01: #414141;
+  --color-dark02: #717171;
+  --color-dark03: #b3b3b3;
 
-  --accent-color: #ff7e1b;
+  --font-exbold: 'NanumSquareNeoExtraBold';
+  --font-bold: 'NanumSquareNeoBold';
+  --font-regular: 'NanumSquareNeo';
+  --color-white: #ffffff;
+
+  --padding-x-01: 1rem;
+  --padding-y-01: 1rem;
+  --padding-x-02: 2rem;
+  --padding-y-02: 2rem;
+
+  --transition01: all 0.2s ease-out;
+  --transition02: all 0.5s ease-out;
 }
-
+html.dark {
+  --color-body-bg: red;
+}
+* {
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: var(--font-regular), 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue';
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-regular), 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -20,10 +44,11 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  color: var(--text-color);
-  background-color: var(--color-bg-light);
+  padding: var(--padding-x-02) var(--padding-y-02);
+  box-sizing: border-box;
+  background-color: var(--color-body-bg);
   line-height: 1;
-  font-weight: 500;
+  accent-color: var(--accent-color);
 }
 #root {
   display: flex;
@@ -39,6 +64,7 @@ body {
   -webkit-box-shadow: 11px 10px 32px -8px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 11px 10px 32px -8px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  overflow: hidden;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -48,6 +74,7 @@ ul {
   list-style: none;
 }
 button {
+  cursor: pointer;
   background-color: transparent;
   border: none;
 }
@@ -60,5 +87,4 @@ section,
 header {
   margin: 0 0;
   padding: 0 0;
-  font-weight: 500;
 }

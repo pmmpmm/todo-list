@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
+import styles from './TodoList.module.css';
 
 export default function TodoList({ filter }) {
   const [todos, setTodos] = useState(readTodoItems);
@@ -12,9 +13,7 @@ export default function TodoList({ filter }) {
     setTodos(todos.filter((todo) => todo.id !== deletTodo.id));
   };
   const handleUpdate = (updateTodo) => {
-    setTodos(
-      todos.map((todo) => (todo.id === updateTodo.id ? updateTodo : todo))
-    );
+    setTodos(todos.map((todo) => (todo.id === updateTodo.id ? updateTodo : todo)));
   };
 
   useEffect(() => {
@@ -23,15 +22,10 @@ export default function TodoList({ filter }) {
 
   const filterItem = getFilterItem(todos, filter);
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filterItem.map((item) => (
-          <Todo
-            key={item.id}
-            todo={item}
-            onDelete={handleDelete}
-            onUpdate={handleUpdate}
-          />
+          <Todo key={item.id} todo={item} onDelete={handleDelete} onUpdate={handleUpdate} />
         ))}
       </ul>
       <AddTodo onAddTodo={handleAddTodo} />
