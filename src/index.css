@@ -1,16 +1,6 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
 
 :root {
-  --color-body-bg: #e5e5e5;
-  --color-main01: #ffffff;
-  --color-main02: #f4f4f4;
-  --accent-color: #f76008;
-  --text-color01: #222222;
-
-  --color-dark01: #414141;
-  --color-dark02: #717171;
-  --color-dark03: #b3b3b3;
-
   --font-exbold: 'NanumSquareNeoExtraBold';
   --font-bold: 'NanumSquareNeoBold';
   --font-regular: 'NanumSquareNeo';
@@ -23,9 +13,48 @@
 
   --transition01: all 0.2s ease-out;
   --transition02: all 0.5s ease-out;
+
+  /* -------- theme light -------- */
+  --color-body-bg: #d6d6e0;
+
+  --color-main01: #ffffff;
+  --color-main02: #f4f4f4;
+  --color-main03: #e9e9e9;
+
+  /* --accent-color: #f76008; */
+  --accent-color: #ee6812;
+
+  --color-dark01: #414141;
+  --color-dark02: #717171;
+  --color-dark03: #b3b3b3;
+
+  --text-color01: #222222;
+  --text-color01-disable: #999999;
+  --text-placeholder: #aaaaaa;
+  --color-scrollbar-thumb: #d1d1d1;
+
+  --filter-opacity: 0.6;
 }
 html.dark {
-  --color-body-bg: red;
+  /* -------- theme dark -------- */
+  --color-body-bg: #4b4b59;
+
+  --color-main01: #232332;
+  --color-main02: #313244;
+  --color-main03: #37384b;
+
+  --accent-color: #ea7428;
+
+  --color-dark01: #ffffff;
+  --color-dark02: #eaeaea;
+  --color-dark03: #a2a2af;
+
+  --text-color01: #f2f2f2;
+  --text-color01-disable: #7f819a;
+  --text-placeholder: #aaaaaa;
+  --color-scrollbar-thumb: #2a2a3c;
+
+  --filter-opacity: 0.65;
 }
 * {
   box-sizing: border-box;
@@ -37,6 +66,7 @@ body {
   margin: 0;
   font-family: var(--font-regular), 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
+  color: var(--text-color01);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -78,6 +108,18 @@ button {
   background-color: transparent;
   border: none;
 }
+input::placeholder {
+  color: var(--text-placeholder);
+  opacity: 1;
+}
+input::-webkit-input-placeholder {
+  color: var(--text-placeholder);
+  opacity: 1;
+}
+input:-ms-input-placeholder {
+  color: var(--text-placeholder);
+  opacity: 1;
+}
 div,
 p,
 button,
@@ -87,4 +129,13 @@ section,
 header {
   margin: 0 0;
   padding: 0 0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-main02);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar-thumb);
 }

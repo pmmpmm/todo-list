@@ -15,10 +15,13 @@
   height: 18px;
   vertical-align: middle;
   cursor: pointer;
-  border: 1px solid green;
+}
+.checkbox:checked + .label {
+  color: var(--text-color01-disable);
+  text-decoration: line-through;
 }
 .label {
-  padding-left: 5px;
+  margin-left: 0.5rem;
   font-size: 15px;
   vertical-align: middle;
   word-break: keep-all;

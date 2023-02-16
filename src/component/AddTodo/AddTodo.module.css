@@ -16,6 +16,8 @@
   border-left-width: 1px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+
+  outline: none;
 }
 .button {
   padding: 0 var(--padding-x-01);

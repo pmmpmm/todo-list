@@ -4,10 +4,11 @@
   align-items: center;
   padding: 18px var(--padding-x-01);
   background-color: var(--color-main01);
+  border-bottom: 1px solid var(--color-main03);
 }
 .filters {
   display: flex;
-  gap: 14px;
+  gap: 1rem;
 }
 .filters .filter .button {
   padding: 4px 0;
@@ -16,7 +17,7 @@
   color: var(--accent-color);
   text-transform: capitalize;
   transition: var(--transition01);
-  opacity: 0.6;
+  opacity: var(--filter-opacity);
 }
 .filters .filter .button:hover,
 .filters .filter.selected .button {
@@ -24,6 +25,7 @@
 }
 .themeToggleBtn {
   display: block;
+  flex: 0 0 1.2rem;
   width: 1.2rem;
   height: 1.2rem;
 }
