@@ -29,9 +29,11 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:13.4.0"],\
           ["@testing-library/user-event", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:13.5.0"],\
+          ["classnames", "npm:2.5.1"],\
           ["eslint-config-react-app", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:7.0.1"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:18.2.0"],\
+          ["react-icons", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1"],\
           ["react-scripts", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1"],\
           ["react-uuid", "npm:2.0.0"],\
           ["web-vitals", "npm:2.1.4"]\
@@ -6811,6 +6813,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../.yarn/berry/cache/cjs-module-lexer-npm-1.2.3-9d788a3c14-10c0.zip/node_modules/cjs-module-lexer/",\
         "packageDependencies": [\
           ["cjs-module-lexer", "npm:1.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["classnames", [\
+      ["npm:2.5.1", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/classnames-npm-2.5.1-c7273f3423-10c0.zip/node_modules/classnames/",\
+        "packageDependencies": [\
+          ["classnames", "npm:2.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15120,6 +15131,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-icons", [\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/react-icons-npm-5.0.1-5e01385cf2-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:5.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-616d44b3c5/6/.yarn/berry/cache/react-icons-npm-5.0.1-5e01385cf2-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1"],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-is", [\
       ["npm:16.13.1", {\
         "packageLocation": "../../../../../.yarn/berry/cache/react-is-npm-16.13.1-a9b9382b4f-10c0.zip/node_modules/react-is/",\
@@ -16885,9 +16918,11 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:13.4.0"],\
           ["@testing-library/user-event", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:13.5.0"],\
+          ["classnames", "npm:2.5.1"],\
           ["eslint-config-react-app", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:7.0.1"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:18.2.0"],\
+          ["react-icons", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1"],\
           ["react-scripts", "virtual:48f4d2f99fca748a6995b0f6f0311a5cfad24e82d44ce149771c1478e1e9633521310b3f8c6fb334774b5a36574ee40d79882ffa89f881334b8f1f18586b4194#npm:5.0.1"],\
           ["react-uuid", "npm:2.0.0"],\
           ["web-vitals", "npm:2.1.4"]\

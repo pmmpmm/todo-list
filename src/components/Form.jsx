@@ -1,8 +1,9 @@
 import React, { useState, useContext, useRef, useLayoutEffect } from 'react';
 import { ItemContext } from '../context/ItemContext';
-import Input from './Input';
-import ButtonPrimaryBg from './ButtonPrimaryBg';
 import uuid from 'react-uuid';
+import styles from './Form.module.css';
+import Input from './Input';
+import Button from './Button';
 
 export default function Form() {
   const { setItems } = useContext(ItemContext);
@@ -11,20 +12,39 @@ export default function Form() {
 
   useLayoutEffect(() => inpRef.current.focus());
 
-  const getItemValue = (e) => {
+  const getInputText = (e) => {
     setText(e.target.value);
   };
-  const addListItem = (e) => {
+
+  const addItem = (e) => {
     e.preventDefault();
-    setItems((prev) => [...prev, { name: text, value: false, key: uuid(), id: uuid() }]);
-    inpRef.current.value = '';
-    inpRef.current.focus();
+    if (!!text === true) {
+      setItems((prev) => [
+        ...prev,
+        { name: text, value: false, key: uuid(), id: uuid() },
+      ]);
+      setText('');
+      inpRef.current.value = '';
+      inpRef.current.focus();
+    }
   };
 
   return (
-    <form onSubmit={addListItem}>
-      <Input type='text' onChange={getItemValue} inpRef={inpRef} />
-      <ButtonPrimaryBg type='submit' text='Add' />
+    <form className={`form ${styles.form}`} onSubmit={addItem}>
+      <Input
+        type="text"
+        placeholder="할 일을 작성해주세요."
+        onChange={getInputText}
+        inpRef={inpRef}
+      />
+      <Button
+        type="submit"
+        label="할 일 추가"
+        variant="contained"
+        size="medium"
+      >
+        Add
+      </Button>
     </form>
   );
 }

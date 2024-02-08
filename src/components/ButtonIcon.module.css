@@ -1,0 +1,37 @@
+.icon {
+  padding: var(--xy-rem-1q);
+  line-height: 0;
+}
+.icon > span {
+  font-size: 0;
+}
+.icon svg {
+  font-size: 1rem;
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: var(--point-color-100);
+}
+.gray {
+  color: var(--color-white);
+  background-color: var(--main-color-80);
+}
+
+.circle {
+  border-radius: 50%;
+}
+.circle.medium {
+  padding: 0.375rem;
+}
+.circle.medium svg {
+  width: 1rem;
+  height: 1rem;
+}
+.circle.small {
+  padding: 5px;
+}
+.circle.small svg {
+  width: 12px;
+  height: 12px;
+}

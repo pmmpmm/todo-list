@@ -1,0 +1,16 @@
+.inp {
+  height: 2.5rem;
+  padding: var(--xy-rem-1hq);
+  font-size: var(--font-size-medium);
+  background-color: var(--main-color-100);
+  border-radius: var(--radius-medium);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+  transition: all var(--speed-basic);
+}
+.inp:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-medium);
+}
+.inp::placeholder {
+  color: var(--tx-color-30);
+}

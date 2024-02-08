@@ -4,16 +4,21 @@ import Form from './components/Form';
 import { ItemContextProvider } from './context/ItemContext';
 import React from 'react';
 import Header from './components/Header';
+import { DarkModeContextProvider } from './context/DarkModeContext';
 
 function App() {
   return (
-    <div>
+    <DarkModeContextProvider>
       <ItemContextProvider>
-        <Header />
-        <List />
-        <Form />
+        <div className="wrapper">
+          <div className="container">
+            <Header />
+            <List />
+            <Form />
+          </div>
+        </div>
       </ItemContextProvider>
-    </div>
+    </DarkModeContextProvider>
   );
 }
 

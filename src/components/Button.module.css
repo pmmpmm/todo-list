@@ -1,0 +1,45 @@
+.contained {
+  font-family: var(--font-extraBold);
+  font-size: 0.875rem;
+  color: var(--color-white);
+  background-color: var(--point-color-100);
+  border-radius: var(--radius-medium);
+}
+.contained.medium {
+  padding-right: var(--rem-1);
+  padding-left: var(--rem-1);
+  height: 2.5rem;
+}
+
+/* text button */
+.text {
+  font-family: var(--font-extraBold);
+  color: var(--point-color-100);
+  transition: all var(--speed-basic);
+}
+.text::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background-color: transparent;
+  transition: all var(--speed-basic);
+}
+.text:hover {
+  transform: scale(1.03);
+}
+
+.text.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background-color: var(--point-color-100);
+  transition: all var(--speed-basic);
+}
+.text.medium {
+  padding: var(--xy-rem-1h);
+  font-size: 0.875rem;
+}
