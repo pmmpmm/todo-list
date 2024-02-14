@@ -1,10 +1,10 @@
 import './App.css';
-import List from './components/List';
-import Form from './components/Form';
+import React, { useState } from 'react';
 import { ItemContextProvider } from './context/ItemContext';
-import React from 'react';
-import Header from './components/Header';
 import { DarkModeContextProvider } from './context/DarkModeContext';
+import Header from './components/Header/Header';
+import List from './components/List/List';
+import Form from './components/ItemForm/Form';
 
 function App() {
   return (

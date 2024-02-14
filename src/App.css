@@ -1,20 +1,25 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
 :root {
   --color-white: #ffffff;
-  --bg-color: #2e364e;
+  --bg-color: #eeeeee;
 
-  --main-color-80: hsl(0, 0%, 85%);
+  --main-color-80: hsl(0, 0%, 80%);
+  --main-color-85: hsl(0, 0%, 85%);
   --main-color-90: hsl(0, 0%, 90%);
   --main-color-95: hsl(0, 0%, 95%);
   --main-color-100: hsl(0, 0%, 100%);
 
   --point-color-90: hsl(35, 100%, 45%);
+  --point-color-95: hsl(35, 100%, 48.5%);
   --point-color-100: hsl(35, 100%, 50%);
+  --point-color-110: hsl(35, 100%, 60%);
 
   --tx-color-0: hsl(0, 0%, 100%);
   --tx-color-30: hsl(0, 0%, 70%);
   --tx-color-50: hsl(0, 0%, 55%);
   --tx-color-100: hsl(0, 0%, 15%);
+
+  --opacity-op1: 1;
 
   --font-light: 'NanumSquareLight';
   --font-regular: 'NanumSquare';
@@ -33,13 +38,28 @@
   --xy-rem-1: 1rem 1rem;
 
   --border-st1: 1px solid #bcbcbc;
+  --radius-medium: 0.25rem;
 
   --box-shadow-medium: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --box-shadow-bg: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
 
-  --radius-medium: 0.25rem;
-
   --speed-basic: 0.15s;
+}
+html.dark {
+  --bg-color: #292929;
+
+  --main-color-85: hsl(0, 0%, 25%);
+  --main-color-95: hsl(0, 0%, 9%);
+  --main-color-100: hsl(0, 0%, 11%);
+
+  --point-color-100: hsl(35, 100%, 48.5%);
+  --point-color-95: hsl(35, 100%, 50%);
+
+  --tx-color-30: hsl(0, 0%, 40%);
+  --tx-color-100: hsl(0, 0%, 80%);
+
+  --border-st1: 1px solid #676767;
+  --opacity-op1: 0.5;
 }
 
 * {
@@ -129,4 +149,5 @@ body {
 .list,
 .form {
   padding: var(--xy-rem-1hq);
+  /* transition: all var(--speed-basic); */
 }

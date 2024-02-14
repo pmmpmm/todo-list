@@ -9,8 +9,11 @@
 }
 .inp:focus {
   outline: none;
-  box-shadow: var(--box-shadow-medium);
 }
 .inp::placeholder {
   color: var(--tx-color-30);
+}
+.inp:hover {
+  box-shadow: var(--box-shadow-medium);
+  transition: all var(--speed-basic);
 }

@@ -19,6 +19,7 @@ export default function Button({
         type={type}
         aria-label={label}
         className={cx([
+          'btn',
           `${variant}`,
           `${size ? size : ''}`,
           `${className ? className : ''}`,

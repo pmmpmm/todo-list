@@ -1,6 +1,7 @@
 .icon {
   padding: var(--xy-rem-1q);
   line-height: 0;
+  transition: all var(--speed-basic);
 }
 .icon > span {
   font-size: 0;
@@ -13,8 +14,14 @@
   color: var(--color-white);
   background-color: var(--point-color-100);
 }
+.primary:hover {
+  background-color: var(--point-color-95);
+}
 .gray {
   color: var(--color-white);
+  background-color: var(--main-color-85);
+}
+.gray:hover {
   background-color: var(--main-color-80);
 }
 

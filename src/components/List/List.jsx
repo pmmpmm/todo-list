@@ -1,21 +1,9 @@
-import React, { useContext, useRef, useLayoutEffect } from 'react';
-import { ItemContext } from '../context/ItemContext';
+import React from 'react';
+import { useItemContext } from '../../context/ItemContext';
 import ListItem from './ListItem';
 
 export default function List() {
-  const { setItems, lists } = useContext(ItemContext);
-  const listRef = useRef();
-
-  useLayoutEffect(() => {
-    const listItems = listRef.current;
-    const listItemsNum = listItems.children.length;
-    const listItem = listItems.firstElementChild;
-    listItems.scrollTo({
-      top: listItemsNum && listItemsNum * listItem.offsetHeight,
-      behavior: 'smooth',
-    });
-    return () => {};
-  }, [lists]);
+  const { setItems, filtered, listRef } = useItemContext();
 
   const delItem = (delId) => {
     setItems((prev) => prev.filter((item) => item.id !== delId));
@@ -31,7 +19,7 @@ export default function List() {
 
   return (
     <ul className="list" ref={listRef}>
-      {lists.map((list) => (
+      {filtered.map((list) => (
         <ListItem
           text={list.name}
           value={list.value}
