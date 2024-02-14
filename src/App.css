@@ -48,7 +48,8 @@
 html.dark {
   --bg-color: #292929;
 
-  --main-color-85: hsl(0, 0%, 25%);
+  --main-color-80: hsl(0, 0%, 25%);
+  --main-color-85: hsl(0, 0%, 22%);
   --main-color-95: hsl(0, 0%, 9%);
   --main-color-100: hsl(0, 0%, 11%);
 
@@ -89,6 +90,20 @@ input[type='text'] {
 input[type='checkbox'],
 input[type='checkbox'] + label {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color-80);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--main-color-100);
+  border-radius: 10px;
 }
 
 html {
