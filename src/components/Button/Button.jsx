@@ -12,7 +12,7 @@ export default function Button({
   children,
 }) {
   const cx = classNames.bind(styles);
-
+  console.log(className);
   return (
     <>
       <button

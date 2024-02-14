@@ -5,7 +5,7 @@ import { IoMdSunny, IoMdMoon } from 'react-icons/io';
 import Button from '../Button/Button';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 
-export default function Header({}) {
+export default function Header() {
   const { dark, toggleDarkMode } = useDaekModeContext();
   const { filters, filter, setFilter } = useItemContext();
 
@@ -51,7 +51,7 @@ export default function Header({}) {
               size="medium"
               className={`${btn.title === filter && 'active'}`}
             >
-              {btn.title}
+              {btn.title.charAt(0).toUpperCase() + btn.title.slice(1)}
             </Button>
           </li>
         ))}

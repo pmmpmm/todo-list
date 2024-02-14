@@ -17,22 +17,16 @@ export function ItemContextProvider({ children }) {
   );
   const [filter, setFilter] = useState(filters[0]);
   const filtered = getFilteredItems(items, filter);
-
-  useEffect(() => {
-    if (localStorage.todoList === undefined) {
-      localStorage.setItem('todoList', JSON.stringify([]));
-    }
-  }, []);
+  const listRef = useRef();
 
   useEffect(() => {
     localStorage.setItem('todoList', JSON.stringify(items));
     return () => {};
   }, [items]);
 
-  const listRef = useRef();
   return (
     <ItemContext.Provider
-      value={{ items, setItems, filters, filter, setFilter, filtered, listRef }}
+      value={{ setItems, filters, filter, setFilter, filtered, listRef }}
     >
       {children}
     </ItemContext.Provider>
